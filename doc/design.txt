@@ -1,0 +1,38 @@
+Design
+======
+
+
+
+Key Selling Points
+++++++++++++++++++
+
+PySide is the recommended first stop for developers willing to use Python with
+Qt and QML. QmlPython is an experimental, alternative design that capitalizes on
+the fact that the only module strictly needed from Qt is QML.
+
+There is no such thing as "QmlPython application". When the developer uses QmlPython, he either
+
+- Creates a plain Qt C++ application from which he instantiates QmlPython
+  runtime, exposing it in his QDeclarativeContext or
+
+- Imports QmlPython as a plugin (second priority)
+
+QmlPython is implemented using the official Python C api. Therefore you
+obviously need a python interpreter (either libpython, or statically linked
+python).
+
+Current plan is to license it with a liberal license (MIT/BSD).
+
+Exposed APIs
+++++++++++++
+
+We plan to expose the following API's:
+    
+* Import python modules
+
+* exac/eval python expressions, receive the eval results in js side (through json)
+
+* Compile python code for later running?
+
+* Maintain references to PyObjects in qml/js?
+
