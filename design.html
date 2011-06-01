@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to QmlPython’s documentation! &mdash; QmlPython v0.1 documentation</title>
+    <title>Design &mdash; QmlPython v0.1 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -19,8 +19,8 @@
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="QmlPython v0.1 documentation" href="#" />
-    <link rel="next" title="Design" href="design.html" /> 
+    <link rel="top" title="QmlPython v0.1 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to QmlPython’s documentation!" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -30,9 +30,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="design.html" title="Design"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">QmlPython v0.1 documentation</a> &raquo;</li> 
+          <a href="index.html" title="Welcome to QmlPython’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">QmlPython v0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -41,24 +41,34 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-qmlpython-s-documentation">
-<h1>Welcome to QmlPython&#8217;s documentation!<a class="headerlink" href="#welcome-to-qmlpython-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<ul>
-<li class="toctree-l1"><a class="reference external" href="design.html">Design</a><ul>
-<li class="toctree-l2"><a class="reference external" href="design.html#key-selling-points">Key Selling Points</a></li>
-<li class="toctree-l2"><a class="reference external" href="design.html#exposed-apis">Exposed APIs</a></li>
+  <div class="section" id="design">
+<h1>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="key-selling-points">
+<h2>Key Selling Points<a class="headerlink" href="#key-selling-points" title="Permalink to this headline">¶</a></h2>
+<p>PySide is the recommended first stop for developers willing to use Python with
+Qt and QML. QmlPython is an experimental, alternative design that capitalizes on
+the fact that the only module strictly needed from Qt is QML.</p>
+<p>There is no such thing as &#8220;QmlPython application&#8221;. When the developer uses QmlPython, he either</p>
+<ul class="simple">
+<li>Creates a plain Qt C++ application from which he instantiates QmlPython
+runtime, exposing it in his QDeclarativeContext or</li>
+<li>Imports QmlPython as a plugin (second priority)</li>
 </ul>
-</li>
+<p>QmlPython is implemented using the official Python C api. Therefore you
+obviously need a python interpreter (either libpython, or statically linked
+python).</p>
+<p>Current plan is to license it with a liberal license (MIT/BSD).</p>
+</div>
+<div class="section" id="exposed-apis">
+<h2>Exposed APIs<a class="headerlink" href="#exposed-apis" title="Permalink to this headline">¶</a></h2>
+<p>We plan to expose the following API&#8217;s:</p>
+<ul class="simple">
+<li>Import python modules</li>
+<li>exac/eval python expressions, receive the eval results in js side (through json)</li>
+<li>Compile python code for later running?</li>
+<li>Maintain references to PyObjects in qml/js?</li>
 </ul>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference external" href="modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference external" href="search.html"><em>Search Page</em></a></li>
-</ul>
 </div>
 
 
@@ -67,20 +77,21 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-            <h3><a href="#">Table Of Contents</a></h3>
+            <h3><a href="index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="#">Welcome to QmlPython&#8217;s documentation!</a><ul>
+<li><a class="reference external" href="#">Design</a><ul>
+<li><a class="reference external" href="#key-selling-points">Key Selling Points</a></li>
+<li><a class="reference external" href="#exposed-apis">Exposed APIs</a></li>
 </ul>
 </li>
-<li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
-            <h4>Next topic</h4>
-            <p class="topless"><a href="design.html"
-                                  title="next chapter">Design</a></p>
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="index.html"
+                                  title="previous chapter">Welcome to QmlPython&#8217;s documentation!</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="_sources/index.txt"
+              <li><a href="_sources/design.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -107,9 +118,9 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="design.html" title="Design"
-             >next</a> |</li>
-        <li><a href="#">QmlPython v0.1 documentation</a> &raquo;</li> 
+          <a href="index.html" title="Welcome to QmlPython’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">QmlPython v0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
