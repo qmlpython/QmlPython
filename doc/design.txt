@@ -36,3 +36,11 @@ We plan to expose the following API's:
 
 * Maintain references to PyObjects in qml/js?
 
+Signals
++++++++
+
+No QObject subclassing will happen on python side. It's not clear Qt signals as
+such will be needed in the first place - it might be simpler to allow python to
+call javascript callbacks directly. For this, we probably need a python type that wraps 
+a QScriptValue.
+
