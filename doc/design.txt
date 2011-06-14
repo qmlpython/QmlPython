@@ -36,6 +36,14 @@ We plan to expose the following API's:
 
 * Maintain references to PyObjects in qml/js?
 
+* Facility to convert simple Python types (bool, str, unicode, int, list, dict)
+  to QVariant and vice versa for marshalling/unmarshalling parameters?
+  -> Here, we could use QDataStream + QBuffer to serialize/unserialize the data,
+     which might be more efficient than the comparable JSON encoding
+
+     see http://apidocs.meego.com/1.0/mtf/mremoteaction_8cpp_source.html for
+     how it serializes/unserializes the data. Questions? Ask thp
+
 Signals
 +++++++
 
